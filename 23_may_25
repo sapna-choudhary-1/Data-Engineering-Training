@@ -1,0 +1,127 @@
+CREATE DATABASE db1;
+
+SELECT name, state_desc 
+FROM sys.databases;
+
+USE db1;
+----
+
+CREATE DATABASE db;
+
+DROP DATABASE db;
+
+----
+---???---
+USE master;
+
+SELECT * 
+FROM sys.tables;
+
+SELECT *
+FROM INFORMATION_SCHEMA.TABLES ;
+
+EXEC sp_help;
+
+EXEC sp_tables;
+
+----
+CREATE TABLE "info"
+(
+ID int NOT NULL PRIMARY KEY,
+Name NVARCHAR(50) NOT NULL,
+Email NVARCHAR(50) NOT NULL,
+GenderID int
+);
+
+CREATE TABLE gender (
+ID int NOT NULL PRIMARY KEY,
+Gender NVARCHAR(50) NOT NULL
+);
+
+----
+CREATE TABLE "infoo"
+(
+ID int NOT NULL PRIMARY KEY,
+Name NVARCHAR(50) NOT NULL,
+Email NVARCHAR(50) NOT NULL,
+GenderID int
+);
+
+DROP TABLE infoo;
+
+----
+ALTER TABLE "info" ADD CONSTRAINT info_genderId_fk
+FOREIGN KEY (GenderId) REFERENCES "gender" (ID);
+
+--or---
+ALTER TABLE [infoo] ADD CONSTRAINT info_genderId_fkk
+FOREIGN KEY (GenderId) REFERENCES gender (ID);
+
+----
+SELECT *
+FROM info;
+
+SELECT *
+FROM gender;
+
+----
+INSERT INTO info (ID, Name, Email)
+VALUES (5, 'Simon', 's@s.com');
+
+INSERT INTO info (ID, Name, Email, GenderID)
+VALUES (6, 'Katy', 'ka@ka.com', 2 );
+
+----
+ALTER TABLE info ADD CONSTRAINT info_genderId_df DEFAULT 3
+FOR "GenderId";
+
+INSERT INTO info (ID, Name, Email)
+VALUES (7, 'Sam', 'sa@sa.com');
+
+INSERT INTO info (ID, Name, Email, GenderID) VALUES (8, 'Kat', 'kt@kt.com', Null );
+
+----
+ALTER TABLE info
+ADD GenderId2 INT NULL
+CONSTRAINT info_genderId_dff DEFAULT 4;
+
+ALTER TABLE info
+DROP CONSTRAINT info_genderId_dff;
+
+----
+DELETE FROM gender
+WHERE ID=2;
+
+ALTER TABLE info ADD CONSTRAINT info_genderId_fkk
+FOREIGN KEY (GenderId2) REFERENCES gender (ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+DELETE FROM gender
+WHERE ID=5;
+
+UPDATE gender SET ID=5
+WHERE ID=4;
+----
+
+DELETE FROM [info] WHERE ID IN (3, 4, 5, 6, 7, 8);
+
+ALTER TABLE [dbo].[info] ADD [age] INT;
+
+ALTER TABLE info DROP CONSTRAINT info_genderId_fkk;
+
+ALTER TABLE info DROP COLUMN GenderId2;
+
+INSERT INTO info VALUES (3, 'Sara', 's@s.com', 2, -100);
+
+ALTER TABLE info
+ADD CONSTRAINT chk_age CHECK (age>=0 and age<150);
+
+ALTER TABLE info
+DROP CONSTRAINT chk_age;
+
+ALTER TABLE info
+ALTER COLUMN age DECIMAL;
+
+
+
