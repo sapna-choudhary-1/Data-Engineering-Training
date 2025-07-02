@@ -58,17 +58,17 @@ print(z.issuperset(x))
 
 
 '''
-| Method               | Example                             | Description                         |
-| -------------------- | ----------------------------------- | ----------------------------------- |
-| `add(x)`             | `colors.add("yellow")`              | Add item                            |
-| `update(iterable)`   | `colors.update(["pink", "purple"])` | Add multiple items                  |
-| `remove(x)`          | `colors.remove("red")`              | Remove item (error if not found)    |
-| `discard(x)`         | `colors.discard("red")`             | Remove item (no error if not found) |
-| `pop()`              | `colors.pop()`                      | Remove random item                  |
-| `clear()`            | `colors.clear()`                    | Empty the set                       |
-| `union(set2)`        | `a.union(b)`                        | Combine sets (no duplicates)        |
-| `intersection(set2)` | `a.intersection(b)`                 | Common items                        |
-| `difference(set2)`   | `a.difference(b)`                   | Items in a not in b                 |
-| `issubset(set2)`     | `a.issubset(b)`                     | True if a is subset of b            |
-| `issuperset(set2)`   | `a.issuperset(b)`                   | True if a contains b                |
+| Method               | Example                             | Description                                         |
+| -------------------- | ----------------------------------- | --------------------------------------------------- |
+| `add(x)`             | `colors.add("yellow")`              | Add item; Returns None if addition is successful    |
+| `update(iterable)`   | `colors.update(["pink", "purple"])` | Add multiple items                                  |
+| `remove(x)`          | `colors.remove("red")`              | Remove item (Key Error if not found); Returns None  |
+| `discard(x)`         | `colors.discard("red")`             | Remove item (no error if not found; Returns None    |
+| `pop()`              | `colors.pop()`                      | Remove random item (Key Error if no ele found)      |
+| `clear()`            | `colors.clear()`                    | Empty the set                                       |
+| `union(set2)`        | `a.union(b)`                        | Combine sets (no duplicates)                        |
+| `intersection(set2)` | `a.intersection(b)`                 | Common items                                        |
+| `difference(set2)`   | `a.difference(b)`                   | Items in a not in b                                 |
+| `issubset(set2)`     | `a.issubset(b)`                     | True if a is subset of b                            |
+| `issuperset(set2)`   | `a.issuperset(b)`                   | True if a contains b                                |
 '''

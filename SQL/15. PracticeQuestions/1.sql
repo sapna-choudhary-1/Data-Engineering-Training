@@ -7,9 +7,9 @@ USE db1;
 ------------------------------------------------------------------------------
 --(Q1) 
 ------------------------------------------------------------------------------
-SELECT * FROM (SELECT 100);
+SELECT * FROM (SELECT 100) AS t;
 SELECT * FROM (SELECT 100) AS tmp;
-SELECT * FROM (SELECT 100 AS sq);
+SELECT * FROM (SELECT 100 AS sq) AS t;
 SELECT * FROM (SELECT 100 AS sq) AS tmp;
 
 
@@ -43,15 +43,17 @@ SELECT NULL=NULL AS abc;
 SELECT NULL IS NULL;
 SELECT 1=1;
 
+
 SELECT NULL AS Value1, NULL AS Value2, NULL = NULL AS IsEqual;
 
 ----  ----
 SELECT MAX(100, 200, 5, 6) AS abc;
 
-SELECT MAX(
+SELECT MAX(col) AS abc
+FROM (
 	SELECT id AS col
 	FROM [TableA]
-	) AS abc
+) AS t
 
 ----  ----
 SELECT CONCAT('A', 100);

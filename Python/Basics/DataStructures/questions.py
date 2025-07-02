@@ -253,9 +253,19 @@ res = list(anagrams.values()); print(res)
 
 
 
+print("\n------------------------------------------------------------------------------")
+print("---- Q15: Rotate the list by n values ----")
+print("------------------------------------------------------------------------------")
+my_list = [1, 2, 3, 4, 5] # Output: [4, 5, 1, 2, 3] if n=2
+n = 2
+l = len(my_list)
+lst = my_list[l-n : ] + my_list[ : l-n]
+print(lst)
+
+
 
 print("\n------------------------------------------------------------------------------")
-print("---- Q15: Return the second largest element from the given list of values ----")
+print("---- Q16: Return the second largest element from the given list of values ----")
 print("------------------------------------------------------------------------------")
 # Way-1: Using set to remove duplicates & indexing
 # Way-2: Using loop and checking with the maximum value
@@ -265,7 +275,7 @@ print("-------------------------------------------------------------------------
 
 
 print("\n------------------------------------------------------------------------------")
-print("---- Q16: Return ordered names of students getting second-lowest-scores ----")
+print("---- Q17: Return ordered names of students getting second-lowest-scores ----")
 print("------------------------------------------------------------------------------")
 # QUES LINK: https://www.hackerrank.com/challenges/nested-list
 
@@ -277,7 +287,7 @@ students.sort(key=lambda x: (x[1], x[0]))
 
 
 print("\n------------------------------------------------------------------------------")
-print("---- Q17: Perform list operations based on given inputs of (function arg1 arg2) ----")
+print("---- Q18: Perform list operations based on given inputs of (function arg1 arg2) ----")
 print("------------------------------------------------------------------------------")
 # QUES LINK: https://www.hackerrank.com/challenges/python-lists
 """
@@ -296,7 +306,7 @@ lst = []; eval(f"lst.{cmd}({int_args})")
 
 
 print("\n------------------------------------------------------------------------------")
-print("---- Q18: Find number of occurances of substring in the given string (consider overlaps too)----")
+print("---- Q19: Find number of occurances of substring in the given string (consider overlaps too)----")
 print("------------------------------------------------------------------------------")
 # QUES LINK: https://www.hackerrank.com/challenges/find-a-string
 # Way-1: Using loop
@@ -306,7 +316,7 @@ print("-------------------------------------------------------------------------
 
 
 print("\n------------------------------------------------------------------------------")
-print("---- Q19: Wrap the string into a paragraph of width 'w' ----")
+print("---- Q20: Wrap the string into a paragraph of width 'w' ----")
 print("------------------------------------------------------------------------------")
 # QUES LINK: https://www.hackerrank.com/challenges/text-wrap
 # :- Using textwrap module
@@ -315,7 +325,7 @@ print("-------------------------------------------------------------------------
 
 
 print("\n------------------------------------------------------------------------------")
-print("---- Q20: Print the capitalized string (12abc when capitalized remains 12abc & not become 12Abc) ----")
+print("---- Q21: Print the capitalized string (12abc when capitalized remains 12abc & not become 12Abc) ----")
 print("------------------------------------------------------------------------------")
 # QUES LINK: https://www.hackerrank.com/challenges/capitalize
 # --------> There can be multiple spaces between 2 words
@@ -326,6 +336,6 @@ print("-------------------------------------------------------------------------
 
 
 print("\n------------------------------------------------------------------------------")
-print("---- Q21: 'The Minion Game' ----")
+print("---- Q22: 'The Minion Game' ----")
 print("------------------------------------------------------------------------------")
 # QUES LINK: https://www.hackerrank.com/challenges/the-minion-game

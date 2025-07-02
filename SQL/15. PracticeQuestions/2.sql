@@ -249,7 +249,7 @@ WHERE a.id NOT IN (
 	);
 
 ----  ----
-SELECT COUNT(a.*), COUNT(a.id), COUNT(a.name)
+SELECT COUNT(*), COUNT(a.id), COUNT(a.name)
 FROM A AS a
 WHERE a.id NOT IN (
 	SELECT id FROM B
