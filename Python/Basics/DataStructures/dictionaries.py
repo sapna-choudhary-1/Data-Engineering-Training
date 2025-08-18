@@ -11,7 +11,7 @@ empty_dict = dict(); print(empty_dict)
 stud = {
     "name": "Sana",
     "age": 25,
-    "skills": ["Python", "AI"]
+    "s_keyills": ["Python", "AI"]
 }
 print(stud)
 
@@ -67,20 +67,20 @@ print("\n----------------------------------- Shallow Copy ----------------------
 stud = {
     "name": "Sana",
     "age": 25,
-    "skills": ["Python", "AI"]
+    "s_keyills": ["Python", "AI"]
 }; print(stud)
 shallow_stud = stud.copy(); print(shallow_stud) # Return a shallow copy
-shallow_stud.pop("skills"); print(shallow_stud, stud)
+shallow_stud.pop("s_keyills"); print(shallow_stud, stud)
 
 
 print("\n----------------------------------- Deep Copy -------------------------------------------")
 stud = {
     "name": "Sana",
     "age": 25,
-    "skills": ["Python", "AI"]
+    "s_keyills": ["Python", "AI"]
 }; print(stud)
 deep_stud = stud; print(deep_stud) # Return a deep copy
-deep_stud.pop("skills"); print(deep_stud, stud)
+deep_stud.pop("s_keyills"); print(deep_stud, stud)
 
 
 '''

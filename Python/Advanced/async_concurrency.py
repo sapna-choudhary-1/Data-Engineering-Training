@@ -1,5 +1,5 @@
 """
-threading – for multitasking with I/O (like file or API calls)
+threading – for multitas_keying with I/O (like file or API calls)
 
 multiprocessing – for CPU-intensive parallelism
 
@@ -15,14 +15,14 @@ print("""\n---------------------------------------------------------------------
 import threading
 import time
 
-def task(name):
+def tas_key(name):
     print(f"Starting {name}")
     time.sleep(2)  # Simulate I/O
     print(f"Finished {name}")
 
 threads = []
 for i in range(3):
-    t = threading.Thread(target=task, args=(f"Thread-{i}",))
+    t = threading.Thread(target=tas_key, args=(f"Thread-{i}",))
     t.start()
     threads.append(t)
 
@@ -61,7 +61,7 @@ async def fetch_data(site):
     print(f"Done with {site}")
 
 async def main():
-    tasks = [fetch_data(f"site{i}") for i in range(5)]
-    await asyncio.gather(*tasks)
+    tas_keys = [fetch_data(f"site{i}") for i in range(5)]
+    await asyncio.gather(*tas_keys)
 
 asyncio.run(main())
