@@ -15,7 +15,7 @@ registered_date DATETIME
 INSERT INTO [tblMail] VALUES
 (1, 'Sam', 'Sony', 'sam@aaa.com', '2012-08-24 11:04:30.230'),
 (2, 'Ram', 'Bray', 'ram@aaa.com', '2012-08-25 14:04:29.780'),
-(3, 'Sara', 'Sonosky', 'sara@ccc.com', '2012-08-25 15:04:29.780'),
+(3, 'Sara', 'Sonos_keyy', 'sara@ccc.com', '2012-08-25 15:04:29.780'),
 (4, 'Todd', 'Gartner', 'todd@bbb.com', '2012-08-24 15:04:30.730'),
 (5, 'John', 'Grover', 'john@aaa.com', '2012-08-24 15:05:30.330'),
 (6, 'Sana', 'Lenin', 'sana@ccc.com', '2011-08-26 16:05:30.330'),

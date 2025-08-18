@@ -16,7 +16,7 @@ CREATE TABLE [tblProduct] (
 
 INSERT INTO [tblProduct] VALUES 
 (1,'Laptops',2340,100),
-(2,'Desktops',3467,50);
+(2,'Des_keytops',3467,50);
 
 CREATE TABLE [tblProductSales] (
 	ProductSalesId INT PRIMARY KEY,

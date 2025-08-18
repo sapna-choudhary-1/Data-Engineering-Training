@@ -28,7 +28,7 @@
     - Covering Query
     - Primary key Constraint Vs. Clustered Index
     - Backend working using Balanced Tree
-    - Singleton seek Vs. Range/Index seek Vs. Multiple skeleton seek
+    - Singleton seek Vs. Range/Index seek Vs. Multiple s_keyeleton seek
     - Primary key without Clustered Index
     - Heap Table
 

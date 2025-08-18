@@ -239,7 +239,7 @@ SELECT name, dept, salary,
 	DENSE_RANK() OVER (ORDER BY salary DESC) AS denseRank
 FROM [tblEmplInfo];
 
----- rank() won't work right, since there's no empl getting rank as 2 for salary due to the skips on repeating salary ranks ----
+---- rank() won't work right, since there's no empl getting rank as 2 for salary due to the s_keyips on repeating salary ranks ----
 WITH [cteTblDuplicates] AS (
 	SELECT name, dept, salary, 
 		ROW_NUMBER() OVER (ORDER BY salary DESC) AS rowNo,

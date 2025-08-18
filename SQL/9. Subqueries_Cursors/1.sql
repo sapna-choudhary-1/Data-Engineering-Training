@@ -12,7 +12,7 @@ CREATE TABLE tblProductSales (Id INT PRIMARY KEY identity, ProductId INT FOREIGN
 INSERT INTO tblProducts VALUES
 ('TV', '52 inch black color LCD TV'),
 ('Laptop', 'Very thin black color acer laptop'),
-('Desktop', 'HP high performance desktop');
+('Des_keytop', 'HP high performance des_keytop');
 
 INSERT INTO tblProductSales VALUES
 (3, 450, 5),

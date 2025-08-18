@@ -180,9 +180,9 @@ SELECT * FROM [depts] ORDER BY id DESC; -- ❌ dept_name changed to 'Other'
 ------------------------------------------------------------------------------
 
 CREATE TABLE [prods]
-(prod_id INT, name VARCHAR(20), unit_price INT);
+(product_id INT, name VARCHAR(20), unit_price INT);
 CREATE TABLE [sales]
-(prod_id INT, qty_sold INT);
+(product_id INT, qty_sold INT);
 
 INSERT INTO [prods] VALUES 
 (1, 'books', 20),
@@ -203,7 +203,7 @@ AS
 SELECT name, SUM((qty_sold * unit_price)) AS total_sales, COUNT(name) AS total_transactions
 FROM [prods] p
 JOIN sales s
-ON p.prod_id = s.prod_id
+ON p.product_id = s.product_id
 GROUP BY name;
 
 DROP VIEW [vWTotalSalesByProducts];
@@ -218,7 +218,7 @@ AS
 SELECT name, SUM(ISNULL((qty_sold * unit_price), 0)) AS total_sales, COUNT_BIG(*) AS total_transactions -- Guideline 2,3
 FROM [dbo].[prods] -- Guideline 3
 JOIN [dbo].[sales]
-ON [dbo].[prods].prod_id = [dbo].[sales].prod_id
+ON [dbo].[prods].product_id = [dbo].[sales].product_id
 GROUP BY name;
 
 SELECT * FROM [vWIndexedTotalSalesByProducts];
