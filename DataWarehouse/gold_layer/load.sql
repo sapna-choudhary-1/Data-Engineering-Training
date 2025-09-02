@@ -231,13 +231,17 @@ BEGIN
         WHERE gender IS NOT NULL
     ) AS src
     ON target.gender = src.gender
-  -- If the record exists, do nothing
+    
+  -- If the record exists in both the source and target → do nothing → keep as is
 
   -- If the record not exists in the target, add it
+  -- In source only → insert
     WHEN NOT MATCHED BY TARGET 
       THEN INSERT (gender)
       VALUES (src.gender)
+
   -- If the record not exists in the source, delete it
+  -- In target only → delete
     WHEN NOT MATCHED BY SOURCE 
       THEN DELETE
     OUTPUT $action, inserted.*, deleted.*;
