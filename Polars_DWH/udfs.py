@@ -24,7 +24,8 @@ def clean(expr: pl.Expr) -> pl.Expr:
     res = expr.cast(pl.Utf8) \
             .str.strip_chars() \
             .str.replace_all(r"[^0-9A-Za-z _-]", "") \
-            .str.to_titlecase()
+            .str.to_titlecase() \
+            .str.strip_chars()
     return res
 
 # --- 4. Translation (replace digits with letters) ---
