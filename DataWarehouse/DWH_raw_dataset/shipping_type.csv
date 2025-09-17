@@ -1,0 +1,6 @@
+shipping_type_id,shipping_type,delivery_estimate
+ship_0001,Express!,3-5 days
+ship_0002!, Normal ,3-7 days!
+Ship_0003, One-Day Delivery ,1 DAY
+Ship_0004, One-Day Delivery ,1 DAY
+SHIP_0004, FAST Delivery ,1-3 days

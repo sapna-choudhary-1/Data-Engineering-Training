@@ -1,0 +1,15 @@
+# Python cache / compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+.de_venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Parquet files (all layers)
+parquet_files/
+*.parquet
