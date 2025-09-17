@@ -5,16 +5,15 @@ import transformations
 
 
 TABLE_GROUPS = {
-    # "initial": {
-    #     "customer": ["gender", "marital_status", "customer_type", "account_status", 
-    #                  "region", "country", "state", "city", "postal_code", "location"],
-    #     "product": ["brand_tier", "brand_name", "brand_country", "brand", 
-    #                 "main_category", "sub_category"],
-    #     "orders": ["payment_source", "lead_type", "order_status"],
-    #     "shipping_type": ["delivery_estimate", "shipping_type"]
-    # },
-    # "final": ["customer", "product", "orders", "sales"]
-    "final": ["product", "orders", "sales"]
+    "initial": {
+        "customer": ["gender", "marital_status", "customer_type", "account_status", 
+                     "region", "country", "state", "city", "postal_code", "location"],
+        "product": ["brand_tier", "brand_name", "brand_country", "brand", 
+                    "main_category", "sub_category"],
+        "orders": ["payment_source", "lead_type", "order_status"],
+        "shipping_type": ["delivery_estimate", "shipping_type"]
+    },
+    "final": ["customer", "product", "orders", "sales"]
 }
 
 TABLE_CONFIG = {
