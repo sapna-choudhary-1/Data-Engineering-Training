@@ -1,8 +1,10 @@
 from datetime import datetime
+
 import polars as pl
 
+
 #### TRANSFORMATION FUNCTIONS ##
-# - Provides transformations specific to the final tables
+# - Provides transformations, for the dataframes, specific to the final tables
 
 # ------------------ Transform Customer Table ------------------
 def transform_customer(df: pl.DataFrame) -> pl.DataFrame:

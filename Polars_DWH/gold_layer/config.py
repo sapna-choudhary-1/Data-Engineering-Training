@@ -2,7 +2,7 @@ from datetime import date
 
 import polars as pl
 
-import transformations
+import df_transformations
 
 
 TABLE_GROUPS = {
@@ -137,7 +137,7 @@ key_col_map = {
 }
 
 transform_fn_map = {
-    "transform_customer": transformations.transform_customer,
-    "transform_product": transformations.transform_product,
-    "transform_sales": transformations.transform_sales,
+    "transform_customer": df_transformations.transform_customer,
+    "transform_product": df_transformations.transform_product,
+    "transform_sales": df_transformations.transform_sales,
 }

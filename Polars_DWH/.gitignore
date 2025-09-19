@@ -3,10 +3,6 @@ __pycache__/
 *.py[cod]
 *.pyo
 
-# Virtual environments
-.venv/
-.de_venv/
-
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
