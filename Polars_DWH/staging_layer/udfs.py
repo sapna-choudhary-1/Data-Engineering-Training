@@ -1,5 +1,6 @@
-import polars as pl
 import re
+import polars as pl
+
 
 # --- 1. Title Case ---
 def to_title_case(expr: pl.Expr) -> pl.Expr:
